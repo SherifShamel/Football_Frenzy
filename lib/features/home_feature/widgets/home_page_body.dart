@@ -11,11 +11,11 @@ class HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        CustomAppBar(title: 'Home View'),
-        SizedBox(height: 12,),
+        SizedBox(height: 40),
+        CustomAppBar(title: 'Home View',icon: Icons.add,),
+        SizedBox(height: 18),
         QuestionWidget(),
       ],
     );
   }
 }
-
