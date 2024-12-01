@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:football_frenzy/features/home_feature/widgets/home_page_body.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
@@ -6,9 +7,10 @@ class HomePageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text("Home Page View"),
-      ),
+
+      body: HomePageBody(),
     );
   }
 }
+
+
