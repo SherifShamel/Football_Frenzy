@@ -16,23 +16,39 @@ class _QuestionWidgetState extends State<QuestionWidget> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
+      height: MediaQuery.sizeOf(context).height * 0.4,
       decoration: BoxDecoration(
         color: Colors.blue,
         borderRadius: BorderRadius.circular(16),
       ),
-      child: ListTile(
-        title: const Text("من هو قائد الجيش "),
-        subtitle: isShown ? const Text("*******") : const Text("Armstrong"),
-        trailing: IconButton(
-          onPressed: () {
-            isShown = !isShown;
-            setState(() {});
-            print(isShown);
-          },
-          icon: const Icon(Icons.remove_red_eye),
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18),
+      child: Center(
+        child: ListTile(
+          title: const Text(
+              "من هو اللاعب الذي سجل أسرع ثلاثية في الدوري الإنجليزي",
+              style: TextStyle(fontSize: 28),
+              textAlign: TextAlign.end),
+          subtitle: isShown
+              ? const Text(
+                  "*******",
+                  textAlign: TextAlign.end,
+                  style: TextStyle(fontSize: 28),
+                )
+              : const Text(
+                  "ساديو ماني",
+                  textAlign: TextAlign.end,
+                  style: TextStyle(fontSize: 28),
+                ),
+          trailing: IconButton(
+            onPressed: () {
+              isShown = !isShown;
+              setState(() {});
+              print(isShown);
+            },
+            icon: const Icon(Icons.remove_red_eye),
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18),
+          ),
         ),
       ),
     );

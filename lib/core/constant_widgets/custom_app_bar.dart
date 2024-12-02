@@ -9,17 +9,14 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Row(
-        children: [
-          Text(title, style: const TextStyle(fontSize: 22)),
+    return Row(
+      children: [
+        Text(title, style: const TextStyle(fontSize: 22)),
 
-          const Spacer(),
+        const Spacer(),
 
-          const MyCustomIcon(icon: Icons.add),
-        ],
-      ),
+        const MyCustomIcon(icon: Icons.add),
+      ],
     );
   }
 }
